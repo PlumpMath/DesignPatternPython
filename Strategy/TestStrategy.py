@@ -17,6 +17,12 @@ class TestCaseStrategy(unittest.TestCase):
         result = context.execute()
         self.assertEqual(3, result)
 
+    def test_invalideValue(self):
+        with self.assertRaises(ValueError) as cm:
+            StrategyAddition('A', 3)
+
+        self.assertTrue(isinstance(cm.exception, ValueError))
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -9,7 +9,7 @@ class Strategy:
             int(a)
             int(b)
         except ValueError:
-            raise ValueError
+            raise ValueError()
 
         self._a = a
         self._b = b
