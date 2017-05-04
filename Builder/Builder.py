@@ -8,7 +8,7 @@ class Builder:
     def getResult(self):
         pass
 
-    def getPartElement(self):
+    def getPartElement(self, element):
         pass
 
     def append(self, item):
