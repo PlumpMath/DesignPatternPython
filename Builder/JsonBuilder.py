@@ -20,13 +20,13 @@ class JsonBuilder(Builder):
         json = json +jsonContent+"}"
         return json
 
-    def getPartElement(self, itemElements):
+    def getPartElement(self, elements):
         itemStr = ""
-        itemSize = len(itemElements)
+        itemSize = len(elements)
         currentItem = 0
-        for key in itemElements:
+        for key in elements:
             currentItem = currentItem + 1
-            itemStr = itemStr + "\"{}\":\"{}\"".format(str(key),str(itemElements[key]))
+            itemStr = itemStr + "\"{}\":\"{}\"".format(str(key),str(elements[key]))
             if(currentItem < itemSize):
                 itemStr = itemStr+", "
 
